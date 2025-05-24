@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha TO-DO List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1>Minha TO-DO List</h1>
+  </header>
+
+  <main id="secaoPrincipal" class="main-container">
+
+    <section class="section-card">
+      <h2 class="text-gray-100">Nova Tarefa</h2>
+
+      <form id="formulario" class="space-y-4">
+
+        <div>
+          <label for="tituloTarefa" class="form-label">Título:</label>
+          <input type="text" id="tituloTarefa" name="tituloTarefa" required class="form-input">
+        </div>
+
+        <div>
+          <label for="dataTarefa" class="form-label">Data da Tarefa:</label>
+          <input type="date" id="dataTarefa" name="dataTarefa" required class="form-input">
+        </div>
+
+        <div>
+          <label for="comentario" class="form-label">Comentário:</label>
+          <textarea id="comentario" name="comentario" rows="3" cols="20" required class="form-textarea"></textarea>
+        </div>
+
+        <fieldset class="form-fieldset">
+          <legend class="text-gray-100">Prioridade:</legend>
+          <div class="radio-group">
+            <label for="prioridade-op1" class="radio-label">
+              <input id="prioridade-op1" type="radio" name="prioridade" value="alta" required class="form-radio red">
+              <span>Alta</span>
+            </label>
+
+            <label for="prioridade-op2" class="radio-label">
+              <input id="prioridade-op2" type="radio" name="prioridade" value="media" required
+                class="form-radio yellow">
+              <span>Média</span>
+            </label>
+
+            <label for="prioridade-op3" class="radio-label">
+              <input id="prioridade-op3" type="radio" name="prioridade" value="baixa" required class="form-radio green">
+              <span>Baixa</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend class="text-gray-100">Deseja Receber Notificação:</legend>
+          <div class="radio-group">
+            <label for="notificacao-op1" class="radio-label">
+              <input id="notificacao-op1" type="radio" name="notificacao" value="sim" required class="form-radio blue">
+              <span>Sim</span>
+            </label>
+
+            <label for="notificacao-op2" class="radio-label">
+              <input id="notificacao-op2" type="radio" name="notificacao" value="nao" required class="form-radio blue">
+              <span>Não</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="button-group">
+          <input type="submit" value="Adicionar Tarefa" class="btn btn-primary">
+          <input type="reset" value="Cancelar" class="btn btn-secondary">
+        </div>
+
+      </form>
+    </section>
+
+    <section id="listaDeTarefas" class="section-card">
+      <h2 class="text-gray-100">Minhas Tarefas</h2>
+      <div class="mb-4">
+        <label for="filtro" class="form-label">Ordenar por:</label>
+        <select id="filtro" class="form-select">
+          <option value="dataCriacao">Data de Criação</option>
+          <option value="dataTarefa">Data da Tarefa</option>
+          <option value="prioridade">Prioridade</option>
+          <option value="alfabetica">Ordem Alfabética</option>
+        </select>
+      </div>
+      <ul id="tarefas" class="space-y-4">
+      </ul>
+    </section>
+
+  </main>
+</body>
+
+</html>

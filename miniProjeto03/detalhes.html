@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalhes da Tarefa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="detalhes.js" defer></script>
+</head>
+
+<body class="bg-gray-900 text-gray-200 font-sans leading-normal tracking-normal">
+  <header class="bg-gray-800 text-white p-4 shadow-md">
+    <h1 class="text-3xl font-bold text-center">Detalhes da Tarefa</h1>
+  </header>
+
+  <main class="container mx-auto p-4">
+    <section id="detalhesTarefa" class="bg-gray-800 p-6 rounded-lg shadow-md mb-4">
+      <h2 id="titulo" class="text-2xl font-semibold mb-4 text-gray-100"></h2>
+      <p class="mb-2"><strong class="font-medium text-gray-300">Data da Tarefa:</strong> <span id="dataTarefa"
+          class="text-gray-400"></span></p>
+      <p class="mb-2"><strong class="font-medium text-gray-300">Comentário:</strong> <span id="comentario"
+          class="text-gray-400"></span></p>
+      <p class="mb-2"><strong class="font-medium text-gray-300">Prioridade:</strong> <span id="prioridade"
+          class="text-gray-400"></span></p>
+      <p class="mb-2"><strong class="font-medium text-gray-300">Notificação:</strong> <span id="notificacao"
+          class="text-gray-400"></span></p>
+      <p class="mb-2"><strong class="font-medium text-gray-300">Data de Criação:</strong> <span id="dataCriacao"
+          class="text-gray-400"></span></p>
+      <p class="mb-2"><strong class="font-medium text-gray-300">Situação:</strong> <span id="statusTarefa"
+          class="font-bold"></span></p>
+    </section>
+
+    <button onclick="window.history.back()"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Voltar
+      à Lista</button>
+  </main>
+
+</body>
+
+</html>
